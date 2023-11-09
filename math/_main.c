@@ -2,6 +2,8 @@
 #include "math.h"
 
 int main() {
-    printf("5 * 3 = %d\n", multiply(5, 3));
+    int a = -5;
+    int b = -3;
+    printf("%d + %d = %d\n", a, b, multiply(a, b));
     return 0;
 }

@@ -1,14 +1,29 @@
-#include "math.h"
-
-
-int multiply(int a, int b)
-
+int multiply(int a, int b) 
 {
-int risultato;
+    
+    int isNegative = 0;
 
-for (int i=0; i<b; i++)
-{
-    risultato+=a;
-}
-return risultato;
+    if (a < 0) 
+    {
+        a = -a;
+        isNegative = !isNegative;  
+    }
+    if (b < 0) 
+    {
+        b = -b;
+        isNegative = !isNegative;  
+    }
+
+    int prodotto = 0;
+    for (int i = 0; i < a; i++) 
+    {
+        prodotto += b;
+    }
+
+    if (isNegative) 
+    {
+        prodotto = -prodotto;
+    }
+
+    return prodotto;
 }
